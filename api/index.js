@@ -18,9 +18,11 @@ mongoose
 
 const app = express();
 
-app.listen(8888, () => {
-  console.log("Server radi na portu 8888!");
+const PORT = process.env.PORT || 8888;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}!`);
 });
+
 const __dirname = path.resolve();
 app.use(express.json());
 
